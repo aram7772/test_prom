@@ -1,0 +1,11 @@
+filebeat.inputs:
+  - type: container
+    enabled: true
+    paths:
+      - /var/lib/docker/containers/*/*.log
+    processors:
+      - add_docker_metadata: ~
+
+output.file:
+  path: "/var/log"
+  filename: "test"

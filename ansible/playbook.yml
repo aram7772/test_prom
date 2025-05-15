@@ -1,0 +1,5 @@
+- name: Install and Run Filebeat For Collectiong logs for Docker
+  hosts: localhost
+  become: true
+  roles:
+    - log_collector
